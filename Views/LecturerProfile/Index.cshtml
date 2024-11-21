@@ -10,7 +10,7 @@
     <!-- Search Bar for Filtering -->
     <div class="row mb-4">
         <div class="col-md-6 offset-md-3">
-            <input type="text" class="form-control" id="searchLecturers" placeholder="Search by name or role..." />
+            <input type="text" class="form-control form-control-lg" id="searchLecturers" placeholder="Search by name or role..." />
         </div>
     </div>
 
@@ -18,14 +18,14 @@
     <div class="row">
         @foreach (var lecturer in Model)
         {
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm border-light">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-lg border-light rounded">
                     <div class="card-body">
-                        <h5 class="card-title text-dark">@lecturer.Name</h5>
+                        <h5 class="card-title text-dark font-weight-bold">@lecturer.Name</h5>
                         <p class="card-text"><strong>Role:</strong> @lecturer.Role</p>
                         <p class="card-text"><strong>UserID:</strong> @lecturer.UserID</p>
 
-                        <div class="d-flex justify-content-between">
+                        <div class="d-flex justify-content-between mt-3">
                             <!-- View and Edit Buttons -->
                             <a class="btn btn-outline-primary btn-sm" asp-controller="LecturerProfile" asp-action="Details" asp-route-id="@lecturer.UserID">
                                 <i class="bi bi-eye"></i> View

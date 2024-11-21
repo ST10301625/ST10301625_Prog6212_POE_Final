@@ -4,27 +4,35 @@
     ViewData["Title"] = "Edit Lecturer Profile";
 }
 
-<h1>Edit Lecturer Profile</h1>
+<h1 class="text-center mb-4">Edit Lecturer Profile</h1>
 
-<form asp-action="Edit" method="post">
+<div class="container">
+    <form asp-action="Edit" method="post">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="UserID">UserID</label>
+                    <input type="email" class="form-control" id="UserID" name="UserID" value="@Model.UserID" disabled />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Role">Role</label>
+                    <input type="text" class="form-control" id="Role" name="Role" value="@Model.Role" disabled />
+                </div>
+            </div>
+        </div>
 
-    <div class="form-group">
-        <label for="UserID">UserID</label>
-        <input type="email" class="form-control" id="UserID" name="UserID" value="@Model.UserID" disabled />
-    </div>
-    <div class="form-group">
-        <label for="Name">Name</label>
-        <input type="text" class="form-control" id="Name" name="Name" value="@Model.Name" required />
-    </div>
+        <div class="form-group">
+            <label for="Name">Name</label>
+            <input type="text" class="form-control" id="Name" name="Name" value="@Model.Name" required />
+        </div>
 
-    <div class="form-group">
-        <label for="Role">Role</label>
-        <input type="text" class="form-control" id="Role" name="Role" value="@Model.Role" disabled />
-    </div>
+        <input type="hidden" name="UserID" value="@Model.UserID" />
 
-    <input type="hidden" name="UserID" value="@Model.UserID" />
-
-    <button type="submit" class="btn btn-primary">Save Changes</button>
-</form>
-
-<a href="@Url.Action("Details", "LecturerProfile", new { id = Model.UserID })" class="btn btn-secondary">Cancel</a>
+        <div class="d-flex justify-content-between mt-4">
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <a href="@Url.Action("Details", "LecturerProfile", new { id = Model.UserID })" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
