@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<div class="container my-5">
+    <h2 class="text-center mb-4" style="color: black;">Privacy Policy</h2>
+
+    <p class="text-center mb-4" style="color: grey;">Your privacy is important to us. This policy outlines how we collect, use, and protect your information within the Contract Monthly Claim System (CMCS).</p>
+
+    <div class="card shadow-sm" style="border-radius: 0;">
+        <div class="card-body">
+            <h5 class="mb-4" style="color: black;">1. Information We Collect</h5>
+            <p style="color: grey;">
+                When using the CMCS, we may collect the following information:
+            </p>
+            <ul style="color: grey;">
+                <li><strong>Personal Identification Information:</strong> Name, email address, contact information, etc.</li>
+                <li><strong>Employment Information:</strong> Hours worked, hourly rate, submitted claims, etc.</li>
+                <li><strong>Supporting Documents:</strong> Any files uploaded in relation to your claims.</li>
+            </ul>
+
+            <h5 class="mb-4 mt-4" style="color: black;">2. How We Use Your Information</h5>
+            <p style="color: grey;">
+                The information collected is used to process, review, and approve your claims efficiently. We also use this data to:
+            </p>
+            <ul style="color: grey;">
+                <li>Verify your work hours and payments.</li>
+                <li>Generate accurate monthly claims.</li>
+                <li>Improve the functionality and user experience of the system.</li>
+            </ul>
+
+            <h5 class="mb-4 mt-4" style="color: black;">3. Information Sharing and Disclosure</h5>
+            <p style="color: grey;">
+                Your data is confidential. It will only be shared with:
+            </p>
+            <ul style="color: grey;">
+                <li><strong>Programme Coordinators and Academic Managers</strong> for claim approval.</li>
+                <li><strong>Internal Administrative Personnel</strong> for administrative purposes.</li>
+                <li>We will not share your data with third parties without your consent, except where required by law.</li>
+            </ul>
+
+            <h5 class="mb-4 mt-4" style="color: black;">4. Data Security</h5>
+            <p style="color: grey;">
+                We take your data security seriously. Measures are in place to protect your personal information from unauthorized access, use, or disclosure.
+            </p>
+
+            <h5 class="mb-4 mt-4" style="color: black;">5. Your Rights</h5>
+            <p style="color: grey;">
+                You have the right to access, update, or delete your personal data at any time. You can request a copy of your data or ask for corrections if needed.
+            </p>
+
+            <h5 class="mb-4 mt-4" style="color: black;">6. Changes to This Policy</h5>
+            <p style="color: grey;">
+                We may update this privacy policy from time to time. Any changes will be reflected on this page with a revised date.
+            </p>
+
+            <h5 class="mb-4 mt-4" style="color: black;">7. Contact Us</h5>
+            <p style="color: grey;">
+                If you have any questions or concerns about this privacy policy, please contact us at support@cmcs-system.com.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Include Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css" />
+
+<!-- Include Bootstrap's JavaScript for tooltips -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Initialize tooltips
+    document.addEventListener('DOMContentLoaded', function () {
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    })
+</script>

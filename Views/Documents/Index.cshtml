@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Prog2bPOEPart2.Models.Document>
+
+@{
+    ViewData["Title"] = "Documents List";
+}
+
+<div class="container my-5">
+    <h2 class="text-center mb-4" style="color: black;">Documents List</h2>
+    <div class="card shadow-lg" style="border-radius: 0; border: none;">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>File Name</th>
+                            <th>Claim Name</th>
+                            <th>File Type</th>
+                            <th>File Path</th>
+                            <th>File Size</th>
+                            <th>Uploaded Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.FileName</td>
+                                <td>@item.Claim?.Name</td>
+                                <td>@item.FileType</td>
+                                <td>@item.FilePath</td>
+                                <td>@item.FileSize</td>
+                                <td>@item.UploadedDate</td>
+                                <td>
+                                    <div class="d-flex justify-content-around">
+                                        <a asp-action="Details" asp-route-id="@item.DocumentId" class="btn btn-info btn-sm" style="border-radius: 0;">Details</a>
+                                        <a asp-action="Edit" asp-route-id="@item.DocumentId" class="btn btn-primary btn-sm" style="border-radius: 0;">Edit</a>
+                                        <a asp-action="Delete" asp-route-id="@item.DocumentId" class="btn btn-danger btn-sm" style="border-radius: 0;">Delete</a>
+                                        <a asp-action="Download" asp-route-id="@item.DocumentId" class="btn btn-success btn-sm" style="border-radius: 0;">Download</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center mt-4">
+        <a asp-action="Index" class="btn btn-secondary" style="border-radius: 0;">Back to List</a>
+    </div>
+</div>
